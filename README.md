@@ -46,6 +46,52 @@
 - **Mode prioritization**: Attempts simpler character sets before moving to complex ones.  
 - **Stage separation**: Ensures high probability combinations are fully attempted before low probability brute-force.  
 
+**ASCII Flowchart:**
+
+'''
++----------------------------+
+|  Start Password Cracking   |
++------------+---------------+
+             |
+             v
++----------------------------+
+|  High Probability Phase    |
+|  - Fixed array at         |
+|    prioritized positions  |
+|  - Short passwords first  |
+|  - Simple mode (digits)   |
++------------+---------------+
+             |
+             v
++----------------------------+
+|  Medium Probability Phase  |
+|  - Fixed array in non-    |
+|    prioritized positions   |
+|  - Medium length passwords|
+|  - Mode: digits + letters |
++------------+---------------+
+             |
+             v
++----------------------------+
+|  Low Probability Phase     |
+|  - Longer passwords       |
+|  - Complex modes: digits +|
+|    letters + special chars|
+|  - Insert custom dict     |
+|  - Full brute-force       |
++------------+---------------+
+             |
+             v
++----------------------------+
+|  Password Found?           |
++------------+---------------+
+     | Yes                     | No
+     v                         |
++----------------+              |
+| Display Password|<-------------+
++----------------+
+'''
+
 ---
 
 ## Installation
