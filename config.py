@@ -4,7 +4,7 @@
 encrypted_file = "/path/to/encrypted.xlsx"
 
 # 解密后输出文件路径
-output_file = "/path/to/unlocked.xlsx"
+output_file = f"{encrypted_file.rsplit('.', 1)[0]}_破解版.xlsx"
 
 # 固定数组（顺序固定）
 fixed_array = "135"
